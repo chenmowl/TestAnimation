@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
     <TextView
         android:id="@+id/tv_animation"
@@ -51,6 +50,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="透明度" />
+
+            <Button
+                android:id="@+id/btn_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="背景" />
+
+            <Button
+                android:id="@+id/btn_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体颜色" />
 
             <Button
                 android:id="@+id/btn_set"

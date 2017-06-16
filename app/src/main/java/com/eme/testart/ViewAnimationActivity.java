@@ -47,14 +47,14 @@ public class ViewAnimationActivity extends AppCompatActivity {
             case R.id.btn_scale://缩放动画
 //                与旋转动画一样，缩放动画也可以设置罗芳的中心点，设置中心为自身中心效果
                 ScaleAnimation scaleAnimation = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5F, Animation.RELATIVE_TO_SELF, 0.5F);
-//                ScaleAnimation scaleAnimation=new ScaleAnimation(0,5,0,5,10,10);
+//                ScaleAnimation scaleAnimation=new ScaleAnimation(a0,5,a0,5,10,10);
                 scaleAnimation.setDuration(2000);
                 tvAnimation.startAnimation(scaleAnimation);
                 break;
             case R.id.btn_rotate://旋转动画
 //                其参数分别为旋转的起始角度和旋转中心点的坐标，当然，可以通过设置参数来控制旋转动画的参考系，这里设置旋转动画的参考系为中心。
                 RotateAnimation rotateAnimation = new RotateAnimation(0, 360, RotateAnimation.RELATIVE_TO_SELF, 0.5F, RotateAnimation.RELATIVE_TO_SELF, 0.5F);
-//                RotateAnimation rotateAnimation=new RotateAnimation(0,360,20,20);
+//                RotateAnimation rotateAnimation=new RotateAnimation(a0,360,20,20);
                 rotateAnimation.setDuration(2000);
                 tvAnimation.startAnimation(rotateAnimation);
                 break;

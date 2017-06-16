@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    Android Gradle Build Error:Some file crunching failed, see logs for details解决办法
+//    出现这个错误的原因是有哪种情况？1.构建Gradle的时候，Gradle会去检查一下是否修改过文件的后缀名；2.一般大多数是出现在图片上，.jpg修改成了.png就会出现这个问题；3.9patch图片也可能出现这个问题。
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
 }
 
 dependencies {
@@ -24,9 +32,9 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //    compile 'com.jakewharton:butterknife-compiler:8.6.0'
+    //    compile 'com.jakewharton:butterknife-compiler:8.6.a0'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'com.android.support.constraint:constraint-layout:p1.a0.2'
     compile 'com.android.support:design:25.3.1'
     compile 'com.jakewharton:butterknife:8.6.0'
     testCompile 'junit:junit:4.12'

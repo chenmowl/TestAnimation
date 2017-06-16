@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this,ViewAnimationActivity.class));
                 break;
             case R.id.btn_zhen:
+                startActivity(new Intent(this,FrameAnimationActivity.class));
                 break;
             case R.id.btn_property:
                 startActivity(new Intent(this,PropertyActivity.class));
